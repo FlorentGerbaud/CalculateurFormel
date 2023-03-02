@@ -22,4 +22,9 @@ public class RealValue implements ExpMath {
 		return String.valueOf(this.n);
 	}
 
+	@Override
+	public ExpMath derivate(IEnvironment ie, String varDeriv) {
+		return new RealValue(0);
+	}
+
 }

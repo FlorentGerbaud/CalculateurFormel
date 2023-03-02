@@ -21,4 +21,10 @@ public class Addition extends BinaryOp{
 		return F;
 	}
 
+	@Override
+	public ExpMath derivate(IEnvironment ie, String varDeriv) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

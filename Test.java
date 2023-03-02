@@ -10,6 +10,9 @@ public class Test {
 		Variable Y = new Variable("y");
 		Variable Z = new Variable("z");
 		//le Y sera passée en argument se sera la variable
+		
+		//################## test sur l'évaluation de fonction en certains points ######################
+		
 		double F = Y.evaluate(env);
 		double F2 = Z.evaluate(env);
 		System.out.println("f(x)="+env.get("z"));
@@ -17,6 +20,13 @@ public class Test {
 		System.out.println("x="+env.get("x"));
 		System.out.println(F);
 		System.out.println(F2);
+		// #############################################################################################
+		
+		//################## test dérivée de fonctions #################################################
+		RealValue Rv=new RealValue(5);
+		Variable V=new Variable("y");
+		System.out.println(Rv.derivate(env, "x"));
+		System.out.println(V.derivate(env, "y"));
 	}
 
 }
