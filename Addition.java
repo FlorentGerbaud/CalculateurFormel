@@ -23,8 +23,7 @@ public class Addition extends BinaryOp{
 
 	@Override
 	public ExpMath derivate(IEnvironment ie, String varDeriv) {
-		// TODO Auto-generated method stub
-		return null;
+		return new Addition(expAddl.derivate(ie, varDeriv),expAddr.derivate(ie, varDeriv));
 	}
 
 }

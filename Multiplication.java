@@ -20,4 +20,9 @@ public class Multiplication extends BinaryOp{
 		double F = expAddl.evaluate(ie)*expAddr.evaluate(ie);
 		return F;
 	}
+
+	@Override
+	public ExpMath derivate(IEnvironment ie, String varDeriv) {
+		return new Addition(new Multiplication(expAddl.derivate(ie, varDeriv), expAddr), new Multiplication(expAddl, expAddr.derivate(ie, varDeriv)));
+	}
 }

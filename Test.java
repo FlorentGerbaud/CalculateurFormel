@@ -24,9 +24,12 @@ public class Test {
 		
 		//################## test dérivée de fonctions #################################################
 		RealValue Rv=new RealValue(5);
-		Variable V=new Variable("y");
+		Variable V=new Variable("x");
+		ExpMath e=new Addition(new Multiplication(Rv, new Multiplication(V, V)),new Addition(new Multiplication(new RealValue(3), V), new Multiplication(new RealValue(-1), Y)));
 		System.out.println(Rv.derivate(env, "x"));
 		System.out.println(V.derivate(env, "y"));
+		System.out.println(e);
+		System.out.println(e.derivate(env, "x").evaluate(env));
 	}
 
 }
